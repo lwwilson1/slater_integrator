@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <cmath>
 #include <cstdlib>
 #include <cstdio>
 #include <cblas.h>

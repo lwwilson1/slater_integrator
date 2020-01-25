@@ -9,6 +9,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <cblas.h>
+#include <cmath>
 #include <lapacke.h>
 
 #include <math.h>
