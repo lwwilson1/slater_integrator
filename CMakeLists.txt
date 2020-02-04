@@ -9,10 +9,15 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib)
 
 find_package(OpenMP REQUIRED)
 find_package(BLAS REQUIRED)
+find_package(LAPACK REQUIRED)
 
 add_library(BLAS_C INTERFACE)
 target_link_libraries(BLAS_C INTERFACE ${BLAS_LIBRARIES})
 target_link_options(BLAS_C INTERFACE ${BLAS_LINKER_FLAGS})
+
+add_library(LAPACK_C INTERFACE)
+target_link_libraries(LAPACK_C INTERFACE ${LAPACK_LIBRARIES})
+target_link_options(LAPACK_C INTERFACE ${LAPACK_LINKER_FLAGS})
 
 add_subdirectory(cubature)
 add_subdirectory(src)
